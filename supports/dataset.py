@@ -11,6 +11,14 @@ class DataSet(object):
         self.trainDict = self.getTrainDict()
 
     def getData(self, fileName):
+        data = np.load(fileName)
+        u = 0
+        i = 0
+        #待完成
+        return data, [u, i]
+
+
+    def getData_old(self, fileName):
         if fileName == 'ml-1m':
             print("Loading ml-1m data set...")
             data = []

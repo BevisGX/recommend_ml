@@ -8,4 +8,6 @@
 15点开始进行第一、二步，完成时间为15:43 文件保存位置为D:\projects\recommend_ml\data\dataset1\video_GH_01.npy
 np array with  [user_id, video_id, score]， 由于合并了多个观看，不包含时间数据
 
-第三步从dataset.getData 开始，待完成
+第三步完成
+
+开始第4步

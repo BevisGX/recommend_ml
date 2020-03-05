@@ -10,19 +10,21 @@ class DataSet(object):
         self.train, self.test = self.getTrainTest()
         self.trainDict = self.getTrainDict()
 
-    def getData(self, fileName):
+    def getData_npy(self, fileName):
         data = np.load(fileName)
         u = 0
         i = 0
-        #待完成
+        for i in range(0, len(data)):
+            u = max(u, data[i][0])
+            i = max(i, data[i][1])
         return data, [u, i]
 
 
-    def getData_old(self, fileName):
+    def getData(self, fileName):
         if fileName == 'ml-1m':
             print("Loading ml-1m data set...")
             data = []
-            filePath = 'data/ratings.dat'
+            filePath = '../data/ratings.dat'
             u = 0
             i = 0
             maxr = 0.0
